@@ -1,23 +1,46 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<h1>This is test battle with Dummy boss!</h1>
+
+<div style="margin-top: 10px;">
+	<button ng-click="reset()">Reset test battle!</button>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+<table style="margin-top: 30px;">
+	<tr>
+		<th colspan="0" ng-bind="testPlayer.name + ' (' + testPlayer.className + ')'"></th>
+	</tr>
+	<tr>
+		<td>HP</td>
+		<td ng-bind="testPlayer.getHp()"></td>
+	</tr>
+	<tr>
+		<td>Attack</td>
+		<td ng-bind="testPlayer.getAttackPower()"></td>
+	</tr>
+	<tr>
+		<td>Armor</td>
+		<td ng-bind="testPlayer.getArmor()"></td>
+	</tr>
+</table>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div style="margin-top: 10px;">
+	<button ng-click="cast('attack')" ng-disabled="bossIsDead">Attack Dummy!</button>
 </div>
+<h2 ng-show="bossIsDead">Boss Is Dead! Reset battle..</h2>
+
+<table style="margin-top: 30px;">
+	<tr>
+		<th colspan="0" ng-bind="bossDummy.name + ' (' + bossDummy.className + ')'"></th>
+	</tr>
+	<tr>
+		<td>HP</td>
+		<td ng-bind="bossDummy.getHp()"></td>
+	</tr>
+	<tr>
+		<td>Attack</td>
+		<td ng-bind="bossDummy.getAttackPower()"></td>
+	</tr>
+	<tr>
+		<td>Armor</td>
+		<td ng-bind="bossDummy.getArmor()"></td>
+	</tr>
+</table>
